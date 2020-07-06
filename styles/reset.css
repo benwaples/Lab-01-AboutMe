@@ -34,3 +34,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+ol, ul {
+	margin: var(--gutter)
+}
+
