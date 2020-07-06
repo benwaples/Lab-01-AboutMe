@@ -98,6 +98,20 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+.aboutMe img {
+    width: 600px;
+}
+
+.aboutMe figcaption {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+figure {
+    border: solid var(--color1);
+    margin: 10px;
+}
   
   @keyframes pulse {
     20% {
