@@ -7,7 +7,6 @@ const results = document.querySelector('.results');
 quizButton.addEventListener('click', () => {
 // set event listeners to update state and DOM
     let score = 0;
-    let stalker;
     const username = prompt('okay, what is your name?');
     const testConfirm = confirm(`ready for a quiz, ${username}?`);
     if (!testConfirm) {
@@ -17,32 +16,26 @@ quizButton.addEventListener('click', () => {
     if (!hometown) {
         return;
     }
-    if (translateToAYes(!hometown)) {
+    if (!translateToAYes(hometown)) {
         score ++;
     }
     const feetToYard = prompt('How many ft in a yrd?');
     if (!feetToYard) {
         return;
     }
-    if (translateToAYes(feetToYard)) {
+    if (feetToYard === '3') {
         score ++;
     }
     const captainWhidbey = prompt('Have I been to Captain Whidbeys?');
     if (!captainWhidbey) {
         return;
     }
-    if (translateToAYes(!hometown)) {
+    if (translateToAYes(captainWhidbey)) {
         score ++;
     }
     console.log(score);
     
     alert('youre done! The results will now be printed to the page.');
-    
-    if (score >= 2) {
-        return stalker = 'Thanks for getting to know me!';
-    } else if (score === 1 || score === 0) {
-        return stalker = 'you can do better than that!';
-    }
 
-    results.textContent = `Nice job ${username}! You got ${score} out of 3 questions correct! ${stalker} `;
+    results.textContent = `Nice job ${username}! You got ${score} out of 3 questions correct! `;
 });
