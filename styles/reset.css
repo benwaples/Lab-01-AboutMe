@@ -35,5 +35,6 @@ time, mark, audio, video {
 }
 
 ol, ul {
-	list-style: none;
+	margin: var(--gutter)
 }
+
