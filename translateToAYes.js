@@ -1,5 +1,8 @@
 export function translateToAYes(answer) {
-    if (answer.toUpperCase().charAt(0) === 'Y') {
+    const stringAnswer = answer.toString;
+    const firstLetter = stringAnswer.charAt(0);
+    const fixedAnswer = firstLetter.toLowerCase();
+    if (fixedAnswer === 'y') {
         return true;
     } else {
         return false;
