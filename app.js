@@ -33,7 +33,6 @@ quizButton.addEventListener('click', () => {
     if (translateToAYes(captainWhidbey)) {
         score ++;
     }
-    console.log(score);
     
     alert('youre done! The results will now be printed to the page.');
 
